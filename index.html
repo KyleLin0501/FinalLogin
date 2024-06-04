@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>登入你的 Canva 帳號</title>
+    <meta name="description" content="登入你的 Canva 帳號，開始創作你的設計">
+    <meta name="keywords" content="Canva, 登入, 設計">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="overlay"></div>
+<header class="headbar">
+    <a href="https://www.canva.com/zh_tw/login/" >
+        <img src="static/canva-logo.svg" alt="canva" width="80">
+    </a>
+    <div class="header-group-button">
+        <button class="header-button" type="button" onmouseover="disignPopup()" >
+            <span>設計焦點</span>
+            <img src="static/arrow.png" alt="arrow" width="10" height="6">
+        </button>
+        <button class="header-button" type="button">
+            <span>商業</span>
+            <img src="static/arrow.png" alt="arrow" width="10" height="6">
+        </button>
+        <button class="header-button" type="button">
+            <span>教育</span>
+            <img src="static/arrow.png" alt="arrow" width="10" height="6">
+        </button>
+        <button class="header-button" type="button">
+            <span>定價和方案</span>
+            <img src="static/arrow.png" alt="arrow" width="10" height="6">
+        </button>
+        <button class="header-button" type="button">
+            <span>學習</span>
+            <img src="static/arrow.png" alt="arrow" width="10" height="6">
+        </button>
+    </div>
+</header>
+<div class="box-set">
+    <div class="box">
+        <h3>迅速登入或註冊</h3>
+        <p>使用你的電子郵件或其他服務，以繼續使用 Canva (完全免費)！</p>
+        <button class="box-button" onclick="openPopup()">
+            <img src="static/google.png" alt="google" width="25">
+            <span>以 Google 繼續</span>
+        </button>
+        <button class="box-button" >
+            <img src="static/fb.png" alt="fb" width="25">
+            <span>以 facebook 繼續</span>
+        </button>
+        <button class="box-button" >
+            <img src="static/mail.png" alt="mail" width="25">
+            <span>以電子郵件帳號繼續</span>
+        </button>
+        <button class="box-button-else" >
+            <span>透過其他方式繼續操作</span>
+        </button>
+        <div class="alert">
+            <p>若繼續操作，即表示你同意 Canva </p>
+            <a href="https://about.canva.com/terms-of-use/">使用條款</a>
+            <p>請參閱我們的</p>
+            <a href="https://about.canva.com/privacy-policy/">隱私權政策</a>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-group">
+        <a href="https://www.canva.com/policies/privacy-policy/">
+            <h4>隱私權政策</h4>
+        </a>
+        <span style="color: white">|</span>
+        <a href="https://www.canva.com/policies/terms-of-use/">
+            <h4>使用條款</h4>
+        </a>
+        <button class="button-style" onclick="togglePopup()">
+            <img src="static/world.png" alt="world" width="20" class="offset">
+            <span class="text-white">繁體中文(台灣）</span>
+            <img src="static/arrow.png" alt="arrow" width="15">
+        </button>
+    </div>
+    <div id="popup" class="popup">
+        <h2>選擇語言</h2>
+        <ul id="language-select">
+            <button class="select-button">
+                <span>繁體中文(台灣）</span>
+            </button>
+            <button class="select-button">
+                <span>English</span>
+            </button>
+            <button class="select-button">
+                <span>Русский</span>
+            </button>
+            <button class="select-button">
+                <span>한국어</span>
+            </button>
+            <button class="select-button">
+                <span>日本語</span>
+            </button>
+            <button class="select-button">
+                <span>ไทย</span>
+            </button>
+            <button class="select-button">
+                <span>简体中文</span>
+            </button>
+
+        </ul>
+    </div>
+</footer>
+<div class="down" onclick="closePopup()"></div>
+<div class="popup2" id="popup2">
+    <h2>選擇帳戶</h2>
+    <button onclick="closePopup()">取消</button>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById('popup2').style.display = 'block';
+        document.querySelector('down').style.display = 'block';
+    }
+    function closePopup() {
+        document.getElementById('popup2').style.display = 'none';
+        document.querySelector('down').style.display = 'none';
+    }
+
+    function disignPopup() {
+        var popup = document.getElementById('disign-popup');
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            popup.style.display = 'block';
+        }
+    }
+
+    function togglePopup() {
+        var popup = document.getElementById('popup');
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            popup.style.display = 'block';
+        }
+    }
+
+</script>
+</body>
+</html>

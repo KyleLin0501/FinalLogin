@@ -1,0 +1,252 @@
+body {
+    background-image: url('static/background-image.webp');
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .4), rgba(0, 0, 0, .8));
+    z-index: -1;
+}
+
+.headbar {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin: 21px 24px;
+}
+
+.header-group-button {
+    margin: 0px 30px;
+}
+
+.header-button {
+    margin: 0px 5px;
+    padding: 10px 10px;
+    color: white;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-size: 15px;
+
+}
+
+.header-button:hover {
+    background-color: rgba(192, 192, 192, .1);
+    border-radius: 5px;
+}
+
+.header-button:hover + .popup {
+    display: block;
+}
+
+.box-set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding-top: 64px;
+}
+
+.box {
+    background-color: white;
+    border-radius: 8px;
+    width: 300px;
+    padding: 32px;
+}
+
+.box .box-button,
+.box .box-button-else {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    background-color: rgba(192, 192, 192, 0.3);
+    border: 0;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    max-width: 280px;
+    min-width: 280px;
+}
+
+.box .box-button:hover {
+    background-color: rgba(192, 192, 192, 0.5);
+}
+
+.box .box-button-else {
+    background-color: rgba(192, 192, 192, 0);
+}
+
+.box .box-button-else:hover {
+    background-color: rgba(192, 192, 192, 0.3);
+}
+.box h3 {
+    font-size: 25px;
+    font-weight: revert;
+}
+
+.box p {
+    color: black;
+    font-weight: normal;
+    font-size: 15px;
+    width: 300px;
+}
+
+.box span {
+    font-size: 15px;
+    width: 250px;
+}
+
+.box a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.alert p,
+.alert a {
+    display: inline;
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.alert a {
+    margin-left: 5px;
+}
+
+
+.popup {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0px;
+    z-index: 1000;
+    border-radius: 5px;
+    margin-right: 15px;
+    height: 300px;
+    padding-left: 10px;
+}
+.down {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    padding: 10px;
+}
+
+footer h4 {
+    display: inline;
+    margin: 0 5px;
+    font-weight: lighter;
+    font-size: 15px;
+    cursor: pointer;
+    text-underline: none;
+    color: white;
+    text-decoration: none;
+}
+
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover h4 {
+    color: mediumpurple !important;
+}
+
+footer a:link,
+footer a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+footer span {
+    font-size: 15px;
+    font-weight: lighter;
+    margin: 0 5px;
+}
+
+footer .footer-group button  {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 0;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    max-width: 210px;
+    min-width: 210px;
+}
+
+footer .text-white {
+    color: white;
+}
+
+footer .select-button {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    background-color: rgba(255, 255, 255);
+    border: 0;
+    cursor: pointer;
+    width: 200px;
+    padding: 5px 5px;
+}
+
+footer .select-button:hover {
+    background-color: rgba(192, 192, 192, 0.3);
+}
+
+button .disign-popup {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0px;
+    z-index: 1000;
+    border-radius: 5px;
+    margin-right: 15px;
+    height: 300px;
+    padding-left: 10px;
+}
+
+.popup2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 10px;
+}
